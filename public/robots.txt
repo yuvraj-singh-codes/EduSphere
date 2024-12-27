@@ -1,0 +1,33 @@
+User-Agent: *
+Disallow: 
+Disallow: /users/
+Disallow: /assemblies/
+Disallow: /tools/
+Disallow: /organizations/
+Disallow: /signin
+Disallow: /signup
+Disallow: /privacy/
+Disallow: /terms/
+Disallow: /users/
+Disallow: /usersearch/
+Disallow: /organizations/
+Disallow: /leaveorganiztion/
+Disallow: /deleteorganiztion/
+Disallow: /orgsharerequest/
+Disallow: /orguserread/
+Disallow: /contact/
+Disallow: /account/
+Disallow: /signup/
+Disallow: /issues/new/
+Disallow: /issues/view/
+Disallow: /issues/view/issues/
+Disallow: /signin/
+Disallow: /signin/
+Disallow: /forgot/
+Disallow: /reset/
+Disallow: /signout/
+Disallow: /unlink/
+Disallow: /auth/
+Disallow: /licence/
+
+Sitemap: https://www.shiftbulk.com/sitemap.xml
