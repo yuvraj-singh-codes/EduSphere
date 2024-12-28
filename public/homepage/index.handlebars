@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Fraternate is a standalone copy of the GitHub user subscription system. Fraternate is open-source, start by deploying as a boilerplate directly off GitHub , or use the npm module as a standalone plugin. Built with mongodB, NodeJS, expressjs and Handlebars.js and designed for flexibility.">
+  <meta name="keywords" content="boilerplate,mongodB, NodeJS, expressjs , Handlebars.js">
+  <meta name="author" content="Jonathan Davies">
+  <meta name="google-site-verification" content="{{VERIFICATION_GOOGLE}}" />  
+  <title>{{pagetitle}}</title>
+</head>
+<body id="page-top">
+  {{>css fontawesome=true bootstrap=true custom=true datatable=true approve=true}}
+  {{>javascript bootstrap=true approve=true googlemaps=true datatable=true recapture=true fontawesome=true moment=true}}
+  {{>navigation}}
+
+
+
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <div id='toToppo' style="z-index: 1000;  position:relative"><a href="#" title="Scroll to top of page."><i class="fa fa-arrow-up fa-2x" aria-hidden="true"></i></a></div>
+  <style type="text/css">
+    #toToppo a {
+      padding: 5px 5px;
+      background: #000;
+      color: #fff;
+      position: fixed;
+      z-index: -15px;
+      bottom: 15px;
+      right: 15px;
+      display: none;
+      text-decoration: none;
+      border-radius: 5px
+    }
+    .error-text {
+      color: #dc3545!important;
+      font-size: small;
+    }
+  </style>
+  <script type="text/javascript">
+    $(document).ready(function(){
+                //Check to see if the window is top if not then display button
+                $(window).scroll(function(){
+                  if ($(this).scrollTop() > 100) {
+                    $('#toToppo a').fadeIn();
+                  } else {
+                    $('#toToppo a').fadeOut();
+                  }
+                });
+                //Click event to scroll to top
+                $('#toToppo a').click(function(){
+                  $('html, body').animate({scrollTop : 0},600);
+                  return false;
+                });
+              });
+
+            </script>
+            <header class="masthead" style="    display: inline-table;">
+              <div class="container h-100">
+                <div class="row h-100">
+                  <div class="col-lg-7 my-auto">
+                    <div class="header-content mx-auto">
+                      <h1 class="display-1">A user and organization subscription management boilerplate. </h1>
+                      <p class="lead">Fraternate is a standalone copy of the GitHub user subscription system.
+                        Fraternate is open-source, start by deploying as a boilerplate directly off GitHub , or use the npm module as a standalone plugin.  Download the Full stack boilerplate using Node.js Mongodb Express.js Handlebars.js from Github. <br>It includes issue tracking and a relationship-based monogdb database functionality similar to GitHub <a target="_blank" href="https://github.com/jondo89/Fraternate">Download</a></p>
+                        <div class="btn-group btn-group-lg" role="group">
+                          <a href="/signup" role="button" class="btn btn-outline-warning">Try it</a>
+                          <a href="/users" role="button" class="btn btn-outline-light">View Users</a>
+                        </div>
+                        <div style="padding-top: 25px">
+                          <h4 class="media-heading">Don’t forget to star on GitHub!</h4>
+                          <p></p>
+                          <a class="github-button" href="https://github.com/Isithelo/{{siteName}}" data-size="large" data-show-count="true" aria-label="Star Isithelo/{{siteName}} on GitHub">Star</a> 
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-5 my-auto">
+                     {{#unless user}}
+                     {{> signuphomepage}}  
+                     {{/unless}}
+                   </div>
+                 </div>
+               </div>
+             </header>
+             <div class="container">
+               <section  >
+                 <h1 class="display-3">This is a open-source boilerplate that can be downloaded from GitHub. </h1>
+                 <h5>All the data on this site is an example the functionality. This site is in Beta, please contribute if you like it.</h5>
+                 <div class="container" style="padding-top: 55px; ">
+
+
+                  <h5>Boilerplate install instructions.</h5>
+
+                   <a class="btn btn-lg btn-outline-primary" target="_blank" href="https://github.com/Isithelo/Fraternate"><i class="fab fa-github"></i> Fraternate</a><small> A direct copy of this website can be downloaded from GitHub.</small><br>
+                   <br>
+                   <a class="btn btn-lg btn-outline-primary btn-sm" target="_blank" href="https://www.npmjs.com/package/fraternate"><i class="fab fa-npm"></i> Fraternate</a><small> The Fraternate NPM module is "mostly" ready to be deployed individually as an npm module , some customization would be required. Fraternate forms the user and organizational management layer of this website functionality.</small>
+                   <br>
+                   <br>
+                   <br>
+                   <h5>Secondary Functionality</h5>
+                   <!-- Example split danger button -->
+                   <a type="button" target="_blank" href="https://www.npmjs.com/package/cleaner-wrasse" class="btn btn-lg btn-outline-primary btn-sm"><i class="fab fa-npm"></i> Cleaner-wrasse</a><small>  The Cleaner-wrasse npm module is basically of commenting system.</small><br><br>
+                   <a type="button" target="_blank" target="_blank" href="https://www.npmjs.com/package/heavylifting" class="btn btn-lg btn-outline-primary btn-sm"><i class="fab fa-npm"></i>  Heavylifting</a> <small> The heavylifting npm module manages the mongo db database. The A relationship based mongo dB database with revision tracking and MS Excel like mathematical functionality. ALPHA dev level but working.</small><br><br>
+                   <a type="button" target="_blank" target="_blank" href="https://www.npmjs.com/package/semini" class="btn btn-lg btn-outline-primary btn-sm"><i class="fab fa-npm"></i>  Semini</a> <small>  The Semini npm module primes the mongo dB database with a few fields that have fixed id’s. Semini is the NPM package that carries out this feature. this is pre alpha dev, as it is basically only needed once. if you want more information on how to do this, just post a request on the fraternate GitHub page and ill push a better version for use.</small>
+
+ 
+
+
+                 </div>
+               </section>
+             </div>
+             <hr>           
+ 
+            <div class="container">
+              <section>
+                <h5 class="display-3">The Framework.</h5>
+                <h3>Designed and built with the following packages.</h3>
+                <div class="row mt-5">
+                  <div class="col-3" >
+                    <p> 
+                      <a href="/installation" target="_blank">
+                        <img style="max-width: 155px;height: 55px"  src="/img/logo/node.png">   
+                      </a>
+                    </p>
+                    <p>Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.</p>
+                    <code>You need to download and install on your PC to run the localhost.</code>
+                  </div>
+                  <div class="col-3" >
+                    <p> 
+                      <a href="/installation" target="_blank">
+                        <img style="max-width: 155px;height: 55px"  src="/img/logo/mongdb.png"> 
+                      </a>
+                      <p>MongoDB is a free and open-source cross-platform document-oriented database program.</p>
+                      <code>You need to download and install on your PC to run the localhost.</code>
+                    </p>
+                  </div>
+                  <div class="col-3" >
+                    <p> 
+                      <a href="/installation" target="_blank">
+                        <img style="max-width: 155px;height: 55px"  src="/img/logo/express.png"> 
+                      </a>
+                      <p>Express.js, or simply Express, is a web application framework for Node.js,</p>
+                      <code>This is included in the Fraternate GitHub Repo.</code>
+                    </p>
+                  </div>
+                  <div class="col-3" >
+                    <p> 
+                      <a href="/installation" target="_blank">
+                        <img style="max-width: 155px;height: 55px"  src="/img/logo/handlebars.png"> 
+                      </a>
+                      <p>Handlebars provides the power necessary to let you build semantic templates effectively with no frustration.</p>
+                      <code>This is included in the Fraternate GitHub Repo.</code>
+                    </p>
+                  </div>
+                </div>
+              </div>
+<hr>
+         <section id="users" class="features">
+            <div class="container">
+              <div class="row">
+                <div class="col-12 ">
+                  <h5 class="display-3">External Integrations.</h5>
+                  <h3>Supports the following external integrations.</h3>
+                </div> 
+                <div class="col-3" >
+                  <p style="padding-top: 35px" > 
+                    <a href="/integration" target="_blank">
+                      <img style="max-width: 155px;height: 55px"  src="/img/logo/reCAPTCHA_logo.png">   
+                    </a>
+                  </p>
+                  <p>Google reCAPTCHA. reCAPTCHA is a CAPTCHA-like system designed to establish that a computer user is human and, at the same time, assist in the digitization of books.</p>
+                </div>
+                <div class="col-3" >
+                  <p style="padding-top: 35px" > 
+                    <a href="/integration" target="_blank">
+                      <img style="max-width: 155px;height: 55px"  src="/img/logo/goauth.png"> 
+                    </a>
+                    <p>Google Oauth.Google APIs use the OAuth 2.0 protocol for authentication and authorization.</p>
+                  </p>
+                </div>
+                <div class="col-3" >
+                  <p style="padding-top: 35px" > 
+                    <a href="/integration" target="_blank">
+                      <img style="max-width: 155px;"  src="/img/logo/Github.png"> 
+                    </a>
+                    <p>GitHub Oauth. Learn how to register and set up permissions and authorization options for OAuth Apps.</p>
+                  </p>
+                </div>
+                <div class="col-3" >
+                  <p style="padding-top: 35px" > 
+                    <a href="/integration" target="_blank">
+                      <img style="max-width: 155px;height: 55px"  src="/img/logo/downloa2d.png"> 
+                    </a>
+                    <p>Google Analytics,Google Analytics is a freemium web analytics service offered by Google that tracks and reports website traffic.</p>
+                  </p>
+                </div>
+                <div class="col-12" style="padding-top: 55px">
+                  <code>Security keys and passcodes are stored on the Heroku server or on the .ENV file for localhost servers.</code>
+                </div> 
+              </div>
+            </div>
+          </section>
+          <hr>
+
+
+             <div class="container">
+               <section >
+                <h5 class="display-3">The .ENV File</h5>
+            
+<p>Dont forget to create a .env file for all of the passwords , keys etc. on the site  , this will not be forked with the GitHub repo and will need to be manaually created on localhost node servers.</p>
+<div class="card"  >
+ 
+  <div class="card-body">
+<pre>
+MAILGUN_USERNAME=''
+MAILGUN_PASSWORD=''
+SESSION_SECRET=''
+MONGODB=''
+GOOGLE_ID=''
+GOOGLE_SECRET='9'
+GITHUB_ID=''
+GITHUB_SECRET=''
+SITE_KEY=''
+SECRET_KEY=''
+MAIL_PORT=''
+MAIL_USERNAME=''
+MAIL_HOST=''
+MAIL_PASSWORD=''
+MERCHANTID = ''
+PUBLICKEY = ''
+PRIVATEKEY = ''
+MERCHANTIDPAYFAST = ''
+MERCHANTKEYPAYFAST = ''
+PASSPHRASEPAYFAST = ''
+URLPAYFAST = ''
+LOCALHOSTPORT='4000'
+DEBUG='true'
+</pre>
+  </div>
+</div>
+              </section>
+
+            </div>
+         
+
+ 
+          
+ 
+        <section id="users" class="features">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+               <h5>Thanks to our users and organizations.</h5>
+               <h3 style="padding-bottom: 15px" class="display-3 mb-5">Thanks to everyone helping test and feedback on the site. </h3>
+               <div style="text-align: center;">
+                <a href="/users" target="_blank" role="button" class="btn btn-lg col-3 btn-outline-secondary"><i class="fa fa-user" aria-hidden="true"></i> Users</a>
+                <a href="/organizations" target="_blank" role="button" class="btn col-3 btn-lg btn-outline-secondary"><i class="fa fa-users" aria-hidden="true"></i> Organizations</a>
+              </div> 
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {{> analytics}}
+      {{> footer}}
+    </body>
+    </html>
